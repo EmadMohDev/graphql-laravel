@@ -77,12 +77,21 @@ return [
             'query' => [
                 // ExampleQuery::class,
                 App\GraphQL\Query\UsersQuery::class,
-                App\GraphQL\Query\PostsQuery::class
+                App\GraphQL\Query\UserQuery::class,
+                App\GraphQL\Query\PostsQuery::class ,
+                App\GraphQL\Query\DepartmentQuery::class ,
+                App\GraphQL\Query\DepartmentsQuery::class ,
+
             ],
             'mutation' => [
                 // ExampleMutation::class,
                 App\GraphQL\Mutations\CreateUser::class ,
-                App\GraphQL\Mutations\UpdateUser::class
+                App\GraphQL\Mutations\UpdateUser::class ,
+               // Department
+               App\GraphQL\Mutations\Department\CreateDepartment::class ,
+               App\GraphQL\Mutations\Department\UpdateDepartment::class ,
+               App\GraphQL\Mutations\Department\DeleteDepartment::class ,
+
             ],
             // The types only available in this schema
             'types' => [
@@ -114,7 +123,8 @@ return [
         // ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
         App\GraphQL\Type\UserType::class,
-        App\GraphQL\Type\PostType::class
+        App\GraphQL\Type\PostType::class ,
+        App\GraphQL\Type\DepartmentType::class
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

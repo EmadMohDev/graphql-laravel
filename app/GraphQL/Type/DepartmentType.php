@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Types;
+namespace App\GraphQL\Type;
 
 use App\Models\Department;
 use GraphQL\Type\Definition\Type;
@@ -29,12 +29,17 @@ class DepartmentType extends GraphQLType
             'email' => [
                 'type' => Type::nonNull(Type::string()),
                 'description' => 'Email of department'
-            ],
-            'users' => [
-                'type' => Type::listOf(GraphQL::type('User')),
-                'description' => 'The users',
-                'always' => ['id', 'name', 'email'],
+            ] ,
+
+            'manager' => [
+                'type' => GraphQL::type('User'),
+                'description' => 'the manager of the department'
             ]
         ];
     }
 }
+
+
+
+
+

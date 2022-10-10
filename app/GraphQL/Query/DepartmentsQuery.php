@@ -1,7 +1,7 @@
 <?php
 
 // https://www.freecodecamp.org/news/build-a-graphql-api-using-laravel/
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Query;
 
 use App\Models\Department;
 use Closure;
@@ -25,5 +25,8 @@ class DepartmentsQuery extends Query
     {
         $fields = $getSelectFields();
         return Department::select($fields->getSelect())->with($fields->getRelations())->get();
+
+    //     return Department::all();
+
     }
 }
