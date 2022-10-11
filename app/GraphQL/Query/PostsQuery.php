@@ -21,7 +21,29 @@ class PostsQuery extends Query
         return Type::listOf(GraphQL::type('Post'));
     }
 
-    public function resolve($root, array $args, $context, ResolveInfo $info, Closure $getSelectFields)
+
+    // we should add this to can filter with args
+    public function args(): array
+    {
+
+        return [
+            'id' => [
+                'type' => Type::int(),
+                'description' => 'The id of the post',
+            ],
+            'title' => [
+                'type' => Type::string(),
+                'description' => 'The name of post',
+            ],
+            'comment' => [
+                'type' => Type::string(),
+                'description' => 'The comment of the post'
+            ],
+        ];
+    }
+
+
+    public function resolve_old($root, array $args, $context, ResolveInfo $info, Closure $getSelectFields)
     {
         $fields = $getSelectFields();
         return Post::select($fields->getSelect())->with($fields->getRelations())->get();
@@ -29,8 +51,11 @@ class PostsQuery extends Query
 
 
 
-    public function resolve222($root, $args)
+    public function resolve($root, $args)
     {
+
+        /*
+        // this filter with id  OR  title
         if (isset($args['id'])) {
             return Post::whereId($args['id'])->get();
         }
@@ -40,6 +65,16 @@ class PostsQuery extends Query
         }
 
         return Post::all();
+        */
+
+
+        // this filter with  all args parameters [ id  /  title  /  comment]
+        return Post::where($args)->get();
     }
 
 }
+
+
+
+
+
