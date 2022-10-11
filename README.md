@@ -9,6 +9,7 @@
 
 ## graphQl with laravel
 we use this package :
+
+``
 composer require rebing/graphql-laravel
-
-
+``
