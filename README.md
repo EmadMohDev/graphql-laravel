@@ -13,3 +13,13 @@ we use this package :
 ``
 composer require rebing/graphql-laravel
 ``
+
+
+
+## Project description:
+This is demo to use graphQl technology with Laravel9
+Here we make list for users , departments 
+Also we make mutations for department CRUD
+Also we make filter by arguments by make queries
+
+✔Technologies : PHP8 & Laravel9 & graphQl
