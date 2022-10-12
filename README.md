@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## graphQl with laravel
+#graphQl with laravel
 we use this package :
 
 ``
@@ -16,7 +16,7 @@ composer require rebing/graphql-laravel
 
 
 
-## Project description:
+#Project description:
 <p>This is demo to use graphQl technology with Laravel9</p>
 <p>Here we make list for users , departments </p>
 <p>Also we make mutations for department CRUD</p>
