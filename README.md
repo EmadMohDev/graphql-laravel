@@ -17,9 +17,9 @@ composer require rebing/graphql-laravel
 
 
 ## Project description:
-This is demo to use graphQl technology with Laravel9
-Here we make list for users , departments 
-Also we make mutations for department CRUD
-Also we make filter by arguments by make queries
+<p>This is demo to use graphQl technology with Laravel9</p>
+<p>Here we make list for users , departments </p>
+<p>Also we make mutations for department CRUD</p>
+<p>Also we make filter by arguments by make queries</p>
 
 ✔Technologies : PHP8 & Laravel9 & graphQl
