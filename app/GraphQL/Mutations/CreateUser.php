@@ -9,6 +9,8 @@ use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
 
+
+// used to create user by grapgQl
 class CreateUser extends Mutation
 {
     protected $attributes = [
